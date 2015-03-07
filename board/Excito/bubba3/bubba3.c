@@ -387,7 +387,7 @@ int misc_init_r (void)
 			setenv("button","0");
 		}else{
 			cmd = getenv ("bootalt2");
-			b3_set_led_color(LED_GREEN);
+			b3_set_led_color(LED_ALT);
 			b3_led_on(0,0,0,0,0,0);
 			setenv("button","1");
 		}

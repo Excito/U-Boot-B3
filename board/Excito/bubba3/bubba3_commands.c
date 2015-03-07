@@ -62,11 +62,18 @@ int do_bubbacmd (cmd_tbl_t * cmdtp, int flag, int argc, char *argv[]){
 				b3_set_led_color(LED_BLUE);
 			}else if( strncmp(argv[2],"green",5) == 0) {
 				b3_set_led_color(LED_GREEN);
+			}else if( strncmp(argv[2],"white",5) == 0) {
+				b3_set_led_color(LED_WHITE);
+			}else if( strncmp(argv[2],"cyan",4) == 0) {
+				b3_set_led_color(LED_CYAN);
+			}else if( strncmp(argv[2],"purple",6) == 0) {
+				b3_set_led_color(LED_PURPLE);
+			}else if( strncmp(argv[2],"yellow",6) == 0) {
+				b3_set_led_color(LED_YELLOW);
+			}else if( strncmp(argv[2],"alt",3) == 0) {
+				b3_set_led_color(LED_ALT);
 			}else if( strncmp(argv[2],"boot",4) == 0) {
 				b3_set_led_color(LED_BOOT);
-			}else if( strncmp(argv[2],"all",3) == 0) {
-				b3_set_led_color(
-					LED_GREEN | LED_BLUE | LED_RED);
 			}else{
 				printf ("Usage:\n%s\n", cmdtp->usage);
 				return 1;
@@ -90,7 +97,7 @@ U_BOOT_CMD (bubbacmd, 3, 1, do_bubbacmd,
 		"bubbacmd button - read out button status\n"
 		"bubbacmd toggle_color - change color for front led\n"
 		"bubbacmd led_blink - Blink front led\n"
-		"bubbacmd color [red|blue|green|boot|all] - set led color\n"
+		"bubbacmd color [red|blue|green|white|cyan|purple|yellow|alt|boot] - set led color\n"
 		"bubbacmd led_off - Turn led off\n"
 		"bubbacmd led_on - Turn led on\n"
 		"bubbacmd suspend - suspend bubba\n");

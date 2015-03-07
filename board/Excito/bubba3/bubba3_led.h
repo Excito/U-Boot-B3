@@ -28,7 +28,13 @@
 #define LED_RED		0x04
 #define LED_GREEN	0x02
 #define LED_BLUE	0x01
-#define LED_BOOT	(LED_RED | LED_BLUE)
+#define LED_YELLOW	LED_RED | LED_GREEN
+#define LED_PURPLE	LED_RED | LED_BLUE
+#define LED_CYAN	LED_GREEN | LED_BLUE
+#define LED_WHITE	LED_RED | LED_GREEN | LED_BLUE
+
+#define LED_BOOT	LED_WHITE
+#define LED_ALT		LED_YELLOW
 
 
 void b3_set_led_color(int rgb);
